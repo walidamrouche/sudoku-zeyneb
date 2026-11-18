@@ -21,7 +21,7 @@ PY
   [ -n "$b" ] && adb shell input tap $b || echo "texte introuvable : $1"
 }
 adb shell am start -W -n com.zeyneb.sudoku/.MainActivity
-sleep 0.8; shot 1-chargement
+sleep 0.2; shot 1-chargement
 sleep 3; shot 2-accueil
 tap_text "Killer"
 for k in $(seq 1 30); do sleep 2; adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; adb shell cat /sdcard/ui.xml | grep -q "Preparing" || break; done

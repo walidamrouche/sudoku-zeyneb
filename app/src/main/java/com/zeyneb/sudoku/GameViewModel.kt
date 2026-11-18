@@ -71,7 +71,7 @@ class GameViewModel(app: Application) : AndroidViewModel(app) {
         refreshSummary()
         for (m in 0..1) ensureReady(m)
         viewModelScope.launch {
-            delay(1_700)
+            delay(2_200)
             if (screen == Screen.Loading) screen = Screen.Home
         }
         viewModelScope.launch {
