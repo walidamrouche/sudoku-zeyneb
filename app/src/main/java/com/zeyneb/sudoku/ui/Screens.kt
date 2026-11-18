@@ -149,7 +149,7 @@ private fun GameScreen(vm: GameViewModel) {
             }
             IconButton(Icons.pause, "Pause") { vm.pause() }
         }
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.weight(0.35f)) // espace au-dessus de la grille
         Box(Modifier.fillMaxWidth().aspectRatio(1f)) {
             if (g == null) {
                 Column(Modifier.align(Alignment.Center), horizontalAlignment = Alignment.CenterHorizontally) {
@@ -179,7 +179,7 @@ private fun GameScreen(vm: GameViewModel) {
                 }
             }
         }
-        Spacer(Modifier.weight(1f))
+        Spacer(Modifier.weight(0.35f)) // entre la grille et les outils
         // outils
         Row(Modifier.fillMaxWidth()) {
             Tool(Icons.undo, "Undo", Modifier.weight(1f)) { vm.undo() }
@@ -207,7 +207,7 @@ private fun GameScreen(vm: GameViewModel) {
                 }
             }
         }
-        Spacer(Modifier.height(18.dp))
+        Spacer(Modifier.weight(0.3f)) // sous le pavé numérique
     }
 }
 
